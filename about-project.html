@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Народная программа</title>
+	<title>Народная программа - О проекте</title>
 	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -18,15 +18,16 @@
 	<link rel="stylesheet" href="css/app.min.css">
 </head>
 
-<body>
+<body class="dark-blue">
 	<!-- wrapper -->
 	<div class="wrapper">
 		<!-- header -->
-		<header class="header @@header" id="header">
+		<header class="header header--transparent" id="header">
 			<div class="container">
 				<div class="header__wrapper">
 					<a href="index.html" class="header__logotype">
-						<img src="img/logotype.svg" width="232px" height="40px" alt="Народная программа">
+						<img class="header__logotype--white" src="img/logotype-white.svg" width="232px" height="40px" alt="Народная программа">
+						<img class="header__logotype--primary" src="img/logotype.svg" width="232px" height="40px" alt="Народная программа">
 					</a>
 					<nav class="nav header__nav">
 						<ul class="nav__list">
@@ -45,7 +46,7 @@
 							<li class="nav__item @@branches">
 								<a class="nav__link" href="#">Отделения</a>
 							</li>
-							<li class="nav__item @@about-project">
+							<li class="nav__item nav__item--active">
 								<a class="nav__link" href="about-project.html">О проекте</a>
 							</li>
 						</ul>
@@ -88,8 +89,34 @@
 			</nav>
 		</div>
 		<!-- end of mobile menu -->
+		<!-- about project -->
+		<section class="about-project" id="about-project">
+			<div class="container">
+				<div class="about-project__wrapper">
+					<h1 class="about-project__heading">База данных платформы «Народная программа»</h1>
+				</div>
+				<div class="about-project__content content">
+					<p>
+						В настоящее время база содержит объекты, реализованные в 2018-2021 годах и подлежащие реализации в 2022 году по региональным и федеральным государственным программам: нацпроекты, программа комплексного развития сельских территорий Самарской области, региональная губернаторская программа "СОдействие", муниципальная программа Самары "Твой конструктор двора", а также социальные проекты от Фонда президентских грантов.
+						<br><br>
+						По карте можно перемещаться при помощи геолокации и адресного поиска. Выбирайте объекты при помощи фильтров, ищите по адресу — и если чего-то важного не хватает, давайте создавать это вместе.
+					</p>
+					<a href="mailto:info@nppro.ru" class="email-us">
+						<div class="email-us__group">
+							<span class="email-us__help">Пишите нам на электронную почту</span>
+							<span class="email-us__value">info@nppro.ru</span>
+						</div>
+						<picture class="email-us__img">
+							<img src="img/email-us.png" alt="Image">
+						</picture>
+					</a>
+					<p>Региональный исполнительный комитет Самарского отделения партии <br>"ЕДИНАЯ РОССИЯ".</p>
+				</div>
+			</div>
+		</section>
+		<!-- end of about project -->
 		<!-- footer -->
-		<footer class="footer @@footer">
+		<footer class="footer footer--dark">
 			<div class="footer__main">
 				<div class="container">
 					<nav class="footer-nav footer__nav">

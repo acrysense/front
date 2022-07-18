@@ -22,40 +22,72 @@
 	<!-- wrapper -->
 	<div class="wrapper">
 		<!-- header -->
-		<header class="header">
+		<header class="header @@header" id="header">
 			<div class="container">
-				<div class="header__logo">
-					<img class="header__logo-icon" src="img/svg/logo.svg" alt="логотип" width="45" height="40">
-					<img class="header__logo-menu" src="img/svg/logo-menu.svg" alt="логотип" width="45" height="40">
-					<div class="header__logo-wrap">
-						<p class="header__logo-top">Народная программа</p>
-						<p>Самарская область</p>
-					</div>
+				<div class="header__wrapper">
+					<a href="index.html" class="header__logotype">
+						<img src="img/logotype.svg" width="232px" height="40px" alt="Народная программа">
+					</a>
+					<nav class="nav header__nav">
+						<ul class="nav__list">
+							<li class="nav__item @@main">
+								<a class="nav__link" href="#">Главная</a>
+							</li>
+							<li class="nav__item @@maps">
+								<a class="nav__link" href="#">Карта</a>
+							</li>
+							<li class="nav__item @@deputy">
+								<a class="nav__link" href="deputy.html">Депутаты</a>
+							</li>
+							<li class="nav__item nav__item--active">
+								<a class="nav__link" href="news.html">Новости</a>
+							</li>
+							<li class="nav__item @@branches">
+								<a class="nav__link" href="#">Отделения</a>
+							</li>
+							<li class="nav__item @@about-project">
+								<a class="nav__link" href="about-project.html">О проекте</a>
+							</li>
+						</ul>
+					</nav>
+					<button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+						<span class="hamburger__title">Меню</span>
+						<div class="hamburger__group">
+							<span class="hamburger__inner"></span>
+							<span class="hamburger__inner"></span>
+							<span class="hamburger__inner"></span>
+						</div>
+					</button>
 				</div>
-				<nav class="header__menu">
-					<ul>
-						<li class="header__nav-item">
-							<a class="header__nav-link" href="#">Главная</a>
-						</li>
-						<li class="header__nav-item">
-							<a class="header__nav-link" href="#">Карта</a>
-						</li>
-						<li class="header__nav-item">
-							<a class="header__nav-link" href="#">Секретарь</a>
-						</li>
-						<li class="header__nav-item">
-							<a class="header__nav-link" href="#">Депутаты</a>
-						</li>
-						<li class="header__nav-item">
-							<a class="header__nav-link" href="#">О проекте</a>
-						</li>
-					</ul>
-					<img class="header__menu-lines" src="img/svg/mob-menu-lines.svg" alt="lines">
-				</nav>
-				<button class="header__menu-btn"><span></span></button>
 			</div>
 		</header>
 		<!-- end of header -->
+		<!-- mobile menu -->
+		<div class="mobile-menu" id="mobile-menu">
+			<nav class="nav mobile-menu__nav">
+				<ul class="nav__list">
+					<li class="nav__item @@main">
+						<a class="nav__link" href="#">Главная</a>
+					</li>
+					<li class="nav__item @@maps">
+						<a class="nav__link" href="#">Карта</a>
+					</li>
+					<li class="nav__item @@deputy">
+						<a class="nav__link" href="deputy.html">Депутаты</a>
+					</li>
+					<li class="nav__item @@news">
+						<a class="nav__link" href="news.html">Новости</a>
+					</li>
+					<li class="nav__item @@branches">
+						<a class="nav__link" href="#">Отделения</a>
+					</li>
+					<li class="nav__item @@about-project">
+						<a class="nav__link" href="about-project.html">О проекте</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- end of mobile menu -->
 		<!-- news card -->
 		<section class="news-card" id="news-card">
 			<div class="container">
@@ -102,6 +134,76 @@
 					<picture class="news-card__img">
 						<img src="img/news-card.jpg" alt="Image">
 					</picture>
+				</div>
+				<div class="news-card__content content">
+					<p>
+						<b>В среду, 1 июня, Дмитрий Азаров принял участие в мероприятиях, посвященных празднованию Международного дня защиты детей, которые прошли в Струковском саду.</b>
+					</p>
+					<p>
+						<i>Здесь глава региона поздравил баскетбольную команду "Самара-СШОР № 1". Ребята одержали победу во всероссийских соревнованиях по баскетболу среди юношей до 15 лет.</i>
+					</p>
+					<p class="accent-text">
+						<span>Дмитрий Азаров поздравил спортсменов и тренера команды Юрия Добрынина, отметив, что ребята сделали настоящий подарок своему наставнику к юбилею. Ему в мае исполнилось 50 лет.</span>
+					</p>
+					<p>Напомним, "Самара-СШОР-1" выиграла финальный турнир всероссийских соревнований по баскетболу среди юношей 2008 года рождения. В решающем матче первенства страны команда под руководством Юрия Добрынина победила столичную СШОР № 49 "Тринта" им. Ю. Я. Раввинского – 76:64. Приз самого ценного игрока финального турнира получил самарец Егор Амосов.</p>
+					<p>Глава региона выразил надежду, что в будущем ребята пополнят ряды баскетбольного клуба "Самара". Дмитрий Азаров обратился к юным спортсменам:</p>
+					<div class="content-quote">
+						<blockquote class="content-quote__text">
+							Парни, на вас мы надеемся.<br>
+							Вы — будущее нашего баскетбола, нашей команды.<br>
+							На вас уже равняются мальчишки и девчонки.
+						</blockquote>
+						<span class="content-quote__author">
+							Азаров Дмитрий Игоревич, секретарь<br>
+							Региональное отделение ВПП "ЕДИНАЯ РОССИЯ"
+						</span>
+					</div>
+					<p>Несмотря на разные политические взгляды и убеждения, депутаты регионального парламента объединились и приняли участие в благотворительной акции по формированию и отправке гуманитарной помощь для жителей ДНР и ЛНР. Финальную точку в отправке груза поставили руководитель фракции «Единая Россия» Александр Живайкин, руководитель фракции КПРФ Алексей Лескин, руководитель фракции ЛДПР Александр Степанов, руководитель фракции «Новые люди» Роман Маркаров, депутат фракции «Справедливая Россия - Патриоты — За правду» Максим Гусейнов.</p>
+				</div>
+				<div class="news-card__content content-slider">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<picture class="content-slider__img">
+									<img src="img/content-slider.png" alt="Image">
+								</picture>
+							</div>
+							<div class="swiper-slide">
+								<picture class="content-slider__img">
+									<img src="img/content-slider.png" alt="Image">
+								</picture>
+							</div>
+							<div class="swiper-slide">
+								<picture class="content-slider__img">
+									<img src="img/content-slider.png" alt="Image">
+								</picture>
+							</div>
+							<div class="swiper-slide">
+								<picture class="content-slider__img">
+									<img src="img/content-slider.png" alt="Image">
+								</picture>
+							</div>
+						</div>
+						<button class="swiper-button-prev" aria-label="Назад">
+							<svg class="swiper-button-icon">
+								<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+							</svg>
+						</button>
+						<div class="swiper-pagination"></div>
+						<button class="swiper-button-next" aria-label="Далее">
+							<svg class="swiper-button-icon">
+								<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="news-card__content content">
+					<p>В добровольном сборе провизии приняли участие жители всех муниципалитетов нашего региона. Организацию же логистики столь важного груза до распределительного центра, откуда уже силами МЧС продукты будут доставлены по назначению, взяли на себя депутаты Самарской Губернской Думы 5 парламентских фракций.</p>
+					<div class="content-accent">
+						<h3 class="content-accent__title">200 тонн</h3>
+						<p class="content-accent__description">гуманитарной помощи с самого начала спецоперации отправлено на Донбасс из Самарской области</p>
+					</div>
+					<p>Руководитель фракции «НОВЫЕ ЛЮДИ» в Самарской Губернской Думе Роман Маркаров резюмировал: «Сегодня представители всех пяти фракций в Самарской Губернской Думе объединились и отправляют груз на Донбасс. В непростое для нашей страны время весь мир должен видеть наше единство. Мы сплочены, а значит, мы непобедимы!».</p>
 				</div>
 			</div>
 		</section>
@@ -187,7 +289,7 @@
 		</section>
 		<!-- end of news -->
 		<!-- footer -->
-		<footer class="footer">
+		<footer class="footer @@footer">
 			<div class="footer__main">
 				<div class="container">
 					<nav class="footer-nav footer__nav">
@@ -208,7 +310,7 @@
 								<a href="#" class="footer-nav__link">Отделения</a>
 							</li>
 							<li class="footer-nav__item">
-								<a href="#" class="footer-nav__link">О проекте</a>
+								<a href="about-project.html" class="footer-nav__link">О проекте</a>
 							</li>
 						</ul>
 					</nav>

@@ -21,41 +21,79 @@
 <body>
 	<!-- wrapper -->
 	<div class="wrapper">
-		<!-- header -->
-		<header class="header">
-			<div class="container">
-				<div class="header__logo">
-					<img class="header__logo-icon" src="img/svg/logo.svg" alt="логотип" width="45" height="40">
-					<img class="header__logo-menu" src="img/svg/logo-menu.svg" alt="логотип" width="45" height="40">
-					<div class="header__logo-wrap">
-						<p class="header__logo-top">Народная программа</p>
-						<p>Самарская область</p>
+		<section class="dark-heading">
+			<!-- header -->
+			<header class="header header--transparent" id="header">
+				<div class="container">
+					<div class="header__wrapper">
+						<a href="index.html" class="header__logotype">
+							<img class="header__logotype--white" src="img/logotype-white.svg" width="232px" height="40px" alt="Народная программа">
+							<img class="header__logotype--primary" src="img/logotype.svg" width="232px" height="40px" alt="Народная программа">
+						</a>
+						<nav class="nav header__nav">
+							<ul class="nav__list">
+								<li class="nav__item @@main">
+									<a class="nav__link" href="#">Главная</a>
+								</li>
+								<li class="nav__item @@maps">
+									<a class="nav__link" href="#">Карта</a>
+								</li>
+								<li class="nav__item nav__item--active">
+									<a class="nav__link" href="deputy.html">Депутаты</a>
+								</li>
+								<li class="nav__item @@news">
+									<a class="nav__link" href="news.html">Новости</a>
+								</li>
+								<li class="nav__item @@branches">
+									<a class="nav__link" href="#">Отделения</a>
+								</li>
+								<li class="nav__item @@about-project">
+									<a class="nav__link" href="about-project.html">О проекте</a>
+								</li>
+							</ul>
+						</nav>
+						<button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+							<span class="hamburger__title">Меню</span>
+							<div class="hamburger__group">
+								<span class="hamburger__inner"></span>
+								<span class="hamburger__inner"></span>
+								<span class="hamburger__inner"></span>
+							</div>
+						</button>
 					</div>
 				</div>
-				<nav class="header__menu">
-					<ul>
-						<li class="header__nav-item">
-							<a class="header__nav-link" href="#">Главная</a>
+			</header>
+			<!-- end of header -->
+			<!-- mobile menu -->
+			<div class="mobile-menu" id="mobile-menu">
+				<nav class="nav mobile-menu__nav">
+					<ul class="nav__list">
+						<li class="nav__item @@main">
+							<a class="nav__link" href="#">Главная</a>
 						</li>
-						<li class="header__nav-item">
-							<a class="header__nav-link" href="#">Карта</a>
+						<li class="nav__item @@maps">
+							<a class="nav__link" href="#">Карта</a>
 						</li>
-						<li class="header__nav-item">
-							<a class="header__nav-link" href="#">Секретарь</a>
+						<li class="nav__item @@deputy">
+							<a class="nav__link" href="deputy.html">Депутаты</a>
 						</li>
-						<li class="header__nav-item">
-							<a class="header__nav-link" href="#">Депутаты</a>
+						<li class="nav__item @@news">
+							<a class="nav__link" href="news.html">Новости</a>
 						</li>
-						<li class="header__nav-item">
-							<a class="header__nav-link" href="#">О проекте</a>
+						<li class="nav__item @@branches">
+							<a class="nav__link" href="#">Отделения</a>
+						</li>
+						<li class="nav__item @@about-project">
+							<a class="nav__link" href="about-project.html">О проекте</a>
 						</li>
 					</ul>
-					<img class="header__menu-lines" src="img/svg/mob-menu-lines.svg" alt="lines">
 				</nav>
-				<button class="header__menu-btn"><span></span></button>
 			</div>
-		</header>
-		<!-- end of header -->
+			<!-- end of mobile menu -->
+			<div class="container">
+				<h2 class="dark-heading__title">Депутаты</h2>
+			</div>
+		</section>
 		<!-- deputy -->
 		<section class="deputy" id="deputy">
 			<div class="container">
@@ -66,36 +104,36 @@
 							<picture class="deputy__img">
 								<img src="img/deputy-01.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Хинштейн Александр Евсеевич</span>
+							<span class="deputy__help">Депутат <br>Самарский округ №158</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-02.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Гутенев Владимир Владимирович</span>
+							<span class="deputy__help">Депутат <br>Тольяттинский округ №159</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-03.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Казаков Виктор Алексеевич</span>
+							<span class="deputy__help">Депутат <br>Красноглинский округ №160</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-04.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Трифонов Андрей Федорович</span>
+							<span class="deputy__help">Депутат <br>Жигулевский округ №161</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-05.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Симановский Леонид Яковлевич</span>
+							<span class="deputy__help">Депутат <br>Промышленный округ №162</span>
 						</a>
 					</div>
 				</div>
@@ -104,87 +142,87 @@
 					<div class="deputy__wrapper">
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-06.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Бескоровайная Светлана Витальевна</span>
+							<span class="deputy__help">Депутат <br>Волжский округ №1</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-07.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Балтер Роман Евгеньевич</span>
+							<span class="deputy__help">Депутат <br>Самарский округ №2</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-08.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Ильина Светлана Сергеевна</span>
+							<span class="deputy__help">Депутат <br>Самарский округ №2</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-09.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Панченко Николай Александрович</span>
+							<span class="deputy__help">Депутат <br>Куйбышевский округ №4</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-10.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Хаджиева Юлия Ростиславовна</span>
+							<span class="deputy__help">Депутат <br>Куйбышевский округ №4</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-11.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Долгополова Ирина Игоревна</span>
+							<span class="deputy__help">Депутат <br>Центральный округ №6</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-12.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Волков Денис Александрович</span>
+							<span class="deputy__help">Депутат <br>Тольяттинский округ №7</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-13.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Бокк Владимир Владимирович</span>
+							<span class="deputy__help">Депутат <br>Ставропольский округ №8</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-14.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Кузьмичева Екатерина Ивановна</span>
+							<span class="deputy__help">Депутат <br>Ставропольский округ №8</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-15.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Сазонова Елена Анатольевна</span>
+							<span class="deputy__help">Депутат <br>Автозаводской округ №10</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-16.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Антимонова Марина Юрьевна</span>
+							<span class="deputy__help">Депутат <br>Безымянский округ №11</span>
 						</a>
 						<a href="deputy-card.html" class="deputy__item">
 							<picture class="deputy__img">
-								<img src="img/deputy-01.png" alt="Image">
+								<img src="img/deputy-17.png" alt="Image">
 							</picture>
-							<span class="deputy__name">sadada</span>
-							<span class="deputy__help">asdada</span>
+							<span class="deputy__name">Дормидонтов Вячеслав Викторович</span>
+							<span class="deputy__help">Депутат <br>Безымянский округ №11</span>
 						</a>
 					</div>
 				</div>
@@ -192,7 +230,7 @@
 		</section>
 		<!-- end of deputy -->
 		<!-- footer -->
-		<footer class="footer">
+		<footer class="footer @@footer">
 			<div class="footer__main">
 				<div class="container">
 					<nav class="footer-nav footer__nav">
@@ -213,7 +251,7 @@
 								<a href="#" class="footer-nav__link">Отделения</a>
 							</li>
 							<li class="footer-nav__item">
-								<a href="#" class="footer-nav__link">О проекте</a>
+								<a href="about-project.html" class="footer-nav__link">О проекте</a>
 							</li>
 						</ul>
 					</nav>
