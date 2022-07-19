@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Народная программа - Карточка депутата</title>
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!-- styles -->
+	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!-- header -->
+		<header class="header @@header" id="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<a href="index.html" class="header__logotype">
+						<img src="img/logotype.svg" width="232px" height="40px" alt="Народная программа">
+					</a>
+					<nav class="nav header__nav">
+						<ul class="nav__list">
+							<li class="nav__item @@main">
+								<a class="nav__link" href="#">Главная</a>
+							</li>
+							<li class="nav__item @@maps">
+								<a class="nav__link" href="#">Карта</a>
+							</li>
+							<li class="nav__item nav__item--active">
+								<a class="nav__link" href="deputy.html">Депутаты</a>
+							</li>
+							<li class="nav__item @@news">
+								<a class="nav__link" href="news.html">Новости</a>
+							</li>
+							<li class="nav__item @@branches">
+								<a class="nav__link" href="#">Отделения</a>
+							</li>
+							<li class="nav__item @@about-project">
+								<a class="nav__link" href="about-project.html">О проекте</a>
+							</li>
+						</ul>
+					</nav>
+					<button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+						<span class="hamburger__title">Меню</span>
+						<div class="hamburger__group">
+							<span class="hamburger__inner"></span>
+							<span class="hamburger__inner"></span>
+							<span class="hamburger__inner"></span>
+						</div>
+					</button>
+				</div>
+			</div>
+		</header>
+		<!-- end of header -->
+		<!-- deputy card -->
+		<section class="deputy-card" id="deputy-card">
+			<div class="container">
+				<div class="section-heading section-heading--combo">
+					<!-- breadcrumb -->
+					<nav class="breadcrumb section-heading__breadcrumb" aria-label="Breadcrumb">
+						<ol class="breadcrumb__list">
+							<li class="breadcrumb__item">
+								<a class="breadcrumb__link" href="index.html">
+									<svg class="breadcrumb__icon">
+										<use xlink:href="img/sprite.svg#icon-home"></use>
+									</svg>
+								</a>
+							</li>
+							<li class="breadcrumb__item">
+								<a class="breadcrumb__link" href="deputy.html">Депутаты</a>
+							</li>
+						</ol>
+					</nav>
+					<!-- end of breadcrumb -->
+					<h2 class="section-heading__title">Трифонов Андрей Федорович</h2>
+				</div>
+				<div class="deputy-card__wrapper">
+					<div class="deputy-card__left">
+						<div class="deputy-card__details">
+							<picture class="deputy-card__ava">
+								<img src="img/deputy-ava.png" alt="Image">
+							</picture>
+							<a href="#" class="deputy-card__btn btn">Написать обращение</a>
+							<ul class="c-contacts deputy-card__contacts">
+								<li class="c-contacts__item">
+									<a href="tel:+79272105333" class="c-contacts__link">
+										<div class="c-contacts__icon-wrap">
+											<svg class="c-contacts__icon" width="10px" height="16px">
+												<use xlink:href="img/sprite.svg#icon-tel"></use>
+											</svg>
+										</div>
+										<span>+7 927 210-53-33</span>
+									</a>
+								</li>
+								<li class="c-contacts__item">
+									<a href="tel:+7495692890165" class="c-contacts__link">
+										<div class="c-contacts__icon-wrap">
+											<svg class="c-contacts__icon" width="10px" height="16px">
+												<use xlink:href="img/sprite.svg#icon-tel"></use>
+											</svg>
+										</div>
+										<span>+7 495 692-89-01-65</span>
+									</a>
+								</li>
+								<li class="c-contacts__item">
+									<a href="mailto:aftrifonov65@yandex.ru" class="c-contacts__link">
+										<div class="c-contacts__icon-wrap">
+											<svg class="c-contacts__icon" width="14px" height="12px">
+												<use xlink:href="img/sprite.svg#icon-email"></use>
+											</svg>
+										</div>
+										<span>aftrifonov65@yandex.ru</span>
+									</a>
+								</li>
+								<li class="c-contacts__item">
+									<a href="mailto:trifonov@duma.gov.ru" class="c-contacts__link">
+										<div class="c-contacts__icon-wrap">
+											<svg class="c-contacts__icon" width="14px" height="12px">
+												<use xlink:href="img/sprite.svg#icon-email"></use>
+											</svg>
+										</div>
+										<span>trifonov@duma.gov.ru</span>
+									</a>
+								</li>
+								<li class="c-contacts__item">
+									<a href="mailto:galyuk1801@gmail.com" class="c-contacts__link">
+										<div class="c-contacts__icon-wrap">
+											<svg class="c-contacts__icon" width="14px" height="12px">
+												<use xlink:href="img/sprite.svg#icon-email"></use>
+											</svg>
+										</div>
+										<span>galyuk1801@gmail.com</span>
+									</a>
+								</li>
+								<li class="c-contacts__item">
+									<a href="#" class="c-contacts__link">
+										<div class="c-contacts__icon-wrap">
+											<svg class="c-contacts__icon" width="15px" height="10px">
+												<use xlink:href="img/sprite.svg#icon-vk"></use>
+											</svg>
+										</div>
+										<span>trifonov.life</span>
+									</a>
+								</li>
+								<li class="c-contacts__item">
+									<a href="#" class="c-contacts__link">
+										<div class="c-contacts__icon-wrap">
+											<svg class="c-contacts__icon" width="9px" height="15px">
+												<use xlink:href="img/sprite.svg#icon-ok"></use>
+											</svg>
+										</div>
+										<span>trifonov.life</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="deputy-card__right">
+						<div class="deputy-card__main">
+							<div class="tabs">
+								<ul class="tabs__list">
+									<li class="tabs__item tabs__item--active">
+										<button class="tabs__tab">Информация</button>
+									</li>
+									<li class="tabs__item">
+										<button class="tabs__tab">Карта проектов</button>
+									</li>
+									<li class="tabs__item">
+										<button class="tabs__tab">Календарь встреч</button>
+									</li>
+									<li class="tabs__item">
+										<button class="tabs__tab">Новости</button>
+									</li>
+								</ul>
+								<div class="tabs__wrapper tabs__wrapper--active">
+									<div class="deputy-card__block">
+										<h3 class="deputy-card__title">О депутате</h3>
+										<div class="deputy-card__body">
+											<div class="deputy-card__inner">
+												<span class="deputy-card__help">Округ:</span>
+												<div class="deputy-card__info">
+													<span class="deputy-card__text">Жигулевский округ №161</span>
+												</div>
+											</div>
+											<div class="deputy-card__inner">
+												<span class="deputy-card__help">Отделение:</span>
+												<div class="deputy-card__info">
+													<span class="deputy-card__text">Государственная Дума РФ</span>
+												</div>
+											</div>
+											<div class="deputy-card__inner">
+												<span class="deputy-card__help">Отдел:</span>
+												<div class="deputy-card__info">
+													<span class="deputy-card__text">Приемная</span>
+												</div>
+											</div>
+											<div class="deputy-card__inner">
+												<span class="deputy-card__help">Адрес:</span>
+												<div class="deputy-card__info">
+													<span class="deputy-card__text">Сызрань, ул. Степана Разина, 40А</span>
+													<a href="#" class="view-on-map deputy-card__view">Показать на карте</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="deputy-card__block">
+										<h3 class="deputy-card__title">График работы</h3>
+										<div class="deputy-card__body">
+											<div class="deputy-card__inner">
+												<span class="deputy-card__help">Понедельник:</span>
+												<div class="deputy-card__info">
+													<span class="deputy-card__text">в региональные недели в местных отделениях "Единой России" на территории округа</span>
+												</div>
+											</div>
+											<div class="deputy-card__inner">
+												<span class="deputy-card__help">Суббота:</span>
+												<div class="deputy-card__info">
+													<span class="deputy-card__text">выходной</span>
+												</div>
+											</div>
+											<div class="deputy-card__inner">
+												<span class="deputy-card__help">Воскресенье:</span>
+												<div class="deputy-card__info">
+													<span class="deputy-card__text">выходной</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__wrapper"></div>
+								<div class="tabs__wrapper">
+									<div class="deputy-card__block">
+										<h3 class="deputy-card__title">5 декабря, сб</h3>
+										<div class="deputy-card__body">
+											<div class="deputy-card__inner">
+												<span class="deputy-card__help">10:00</span>
+												<div class="deputy-card__info">
+													<span class="deputy-card__text">Торжественное открытие <a href="#">МОУ СОШ №23</a></span>
+												</div>
+											</div>
+											<div class="deputy-card__inner">
+												<span class="deputy-card__help">16:45</span>
+												<div class="deputy-card__info">
+													<span class="deputy-card__text">Встреча с жителями д. Клюшниково</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="deputy-card__block">
+										<h3 class="deputy-card__title">16 декабря, ср</h3>
+										<div class="deputy-card__body">
+											<div class="deputy-card__inner">
+												<span class="deputy-card__help">12:00</span>
+												<div class="deputy-card__info">
+													<span class="deputy-card__text">Заседание областной Думы Самарской области</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs__wrapper">
+									<div class="news news--no-pd">
+										<div class="news__wrapper news__wrapper--sm">
+											<a href="news-card.html" class="news__item">
+												<div class="news__body">
+													<span class="news__title">«Мой дом» — моя крепость</span>
+													<div class="news__inner">
+														<div class="news__group">
+															<span class="news__date">16</span>
+															<span class="news__help">
+																<span>июня</span>
+																<br>
+																<span>2022</span>
+															</span>
+														</div>
+														<div class="news__icon-wrap">
+															<svg class="news__icon">
+																<use xlink:href="img/sprite.svg#icon-arrow-more"></use>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<picture class="news__img">
+													<img src="img/news-01.png" alt="Image">
+												</picture>
+											</a>
+											<a href="news-card.html" class="news__item">
+												<div class="news__body">
+													<span class="news__title">Дмитрий Азаров: «Ждем вас в БК "Самара"»</span>
+													<div class="news__inner">
+														<div class="news__group">
+															<span class="news__date">01</span>
+															<span class="news__help">
+																<span>июня</span>
+																<br>
+																<span>2022</span>
+															</span>
+														</div>
+														<div class="news__icon-wrap">
+															<svg class="news__icon">
+																<use xlink:href="img/sprite.svg#icon-arrow-more"></use>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<picture class="news__img">
+													<img src="img/news-01.png" alt="Image">
+												</picture>
+											</a>
+											<a href="news-card.html" class="news__item">
+												<div class="news__body">
+													<span class="news__title">Губернатор Самарской области поздравил жителей региона с Днем защиты детей</span>
+													<div class="news__inner">
+														<div class="news__group">
+															<span class="news__date">01</span>
+															<span class="news__help">
+																<span>июня</span>
+																<br>
+																<span>2022</span>
+															</span>
+														</div>
+														<div class="news__icon-wrap">
+															<svg class="news__icon">
+																<use xlink:href="img/sprite.svg#icon-arrow-more"></use>
+															</svg>
+														</div>
+													</div>
+												</div>
+												<picture class="news__img">
+													<img src="img/news-01.png" alt="Image">
+												</picture>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end of deputy card -->
+		<!-- footer -->
+		<footer class="footer @@footer">
+			<div class="footer__main">
+				<div class="container">
+					<nav class="footer-nav footer__nav">
+						<ul class="footer-nav__list">
+							<li class="footer-nav__item">
+								<a href="index.html" class="footer-nav__link">Главная</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Карта</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="deputy.html" class="footer-nav__link">Депутаты</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="news.html" class="footer-nav__link">Новости</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Отделения</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="about-project.html" class="footer-nav__link">О проекте</a>
+							</li>
+						</ul>
+					</nav>
+					<p class="footer__copyright">Платформа "Народная программа" © 2022 Самарское региональное отделение партии "Единая Россия"</p>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="container">
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#" class="footer__link">Правовая информация</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Политика конфиденциальности</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Противодействие коррупции</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<!-- end of footer -->
+	</div>
+	<!-- end of wrapper -->
+	<!-- scripts -->
+	<script src="js/vendor.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
