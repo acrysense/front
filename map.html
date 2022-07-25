@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Народная программа - Карта</title>
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!-- styles -->
+	<link rel="stylesheet" href="css/vendor.min.css">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+	<!-- wrapper -->
+	<div class="wrapper">
+		<!-- header -->
+		<header class="header @@header" id="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<a href="index.html" class="header__logotype">
+						<img src="img/logotype.svg" width="232px" height="40px" alt="Народная программа">
+					</a>
+					<nav class="nav header__nav">
+						<ul class="nav__list">
+							<li class="nav__item @@main">
+								<a class="nav__link" href="index.html">Главная</a>
+							</li>
+							<li class="nav__item nav__item--actives">
+								<a class="nav__link" href="map.html">Карта</a>
+							</li>
+							<li class="nav__item @@deputy">
+								<a class="nav__link" href="deputy.html">Депутаты</a>
+							</li>
+							<li class="nav__item @@news">
+								<a class="nav__link" href="news.html">Новости</a>
+							</li>
+							<li class="nav__item @@branches">
+								<a class="nav__link" href="branches.html">Отделения</a>
+							</li>
+							<li class="nav__item @@about-project">
+								<a class="nav__link" href="about-project.html">О проекте</a>
+							</li>
+						</ul>
+					</nav>
+					<button class="hamburger" id="hamburger-toggle" aria-label="Меню">
+						<span class="hamburger__title">Меню</span>
+						<div class="hamburger__group">
+							<span class="hamburger__inner"></span>
+							<span class="hamburger__inner"></span>
+							<span class="hamburger__inner"></span>
+						</div>
+					</button>
+				</div>
+			</div>
+		</header>
+		<!-- end of header -->
+		<!-- main map -->
+		<div class="main-map" id="main-map">
+			<div class="main-map__filters">
+				<button class="main-map__trigger">
+					<svg class="main-map__trigger-icon">
+						<use xlink:href="img/sprite.svg#icon-filter"></use>
+					</svg>
+					<span>Фильтр</span>
+				</button>
+				<div class="search-map main-map__search">
+					<input type="text" class="search-map__input" placeholder="Поиск по адресу">
+					<button class="search-map__clear search-map__btn search-map__btn--hidden" aria-label="Очистить">
+						<svg class="search-map__btn-icon search-map__btn-icon--sm">
+							<use xlink:href="img/sprite.svg#icon-clear"></use>
+						</svg>
+					</button>
+					<button class="search-map__btn search-map__btn--hidden" aria-label="Список">
+						<svg class="search-map__btn-icon">
+							<use xlink:href="img/sprite.svg#icon-list"></use>
+						</svg>
+					</button>
+					<button class="search-map__btn" aria-label="Искать">
+						<svg class="search-map__btn-icon">
+							<use xlink:href="img/sprite.svg#icon-search"></use>
+						</svg>
+					</button>
+					<div class="search-map__scroll">
+						<!-- for visible add class 'search-map__scroll--active' -->
+						<ul class="search-map__dropdown" data-simplebar>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">Самара</span>
+								</a>
+							</li>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">Саратов</span>
+								</a>
+							</li>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">Санкт-Петербург</span>
+								</a>
+							</li>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">Самарская область</span>
+								</a>
+							</li>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">Саранск, Республика Мордовия</span>
+								</a>
+							</li>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">Санкт-Петербург</span>
+								</a>
+							</li>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">Самарская область</span>
+								</a>
+							</li>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">Санкт-Петербург</span>
+								</a>
+							</li>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">Самарская область</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="search-map__scroll">
+						<!-- for visible add class 'search-map__scroll--active' -->
+						<ul class="search-map__dropdown" data-simplebar>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">Самара</span>
+									<span class="search-map__help">Россия</span>
+								</a>
+							</li>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">СТД Самара</span>
+									<span class="search-map__help">Россия, Самарская область, Красноярский район</span>
+								</a>
+							</li>
+							<li class="search-map__item">
+								<a href="#" class="search-map__elem">
+									<span class="search-map__name">СТД Самара-Лада</span>
+									<span class="search-map__help">Россия, Самарская область, Красноярский район, городское поселение Новосемейково</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main-map__group">
+					<div class="main-map__select select-box">
+						<div class="select-box__container">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option select-box__option--flex">
+										<input type="text" class="select-box__search" placeholder="Поиск">
+										<button class="select-box__search-btn">
+											<svg class="select-box__search-icon">
+												<use xlink:href="img/sprite.svg#icon-search"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-01" name="payments-sort-0">
+										<label for="payments-sort-01" class="select-box__label">Самарская область</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-02" name="payments-sort-0">
+										<label for="payments-sort-02" class="select-box__label">Самарский округ №158</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-03" name="payments-sort-0">
+										<label for="payments-sort-03" class="select-box__label">Тольяттинский округ №159</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-04" name="payments-sort-0">
+										<label for="payments-sort-04" class="select-box__label">Красноглинский округ №160</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-05" name="payments-sort-0">
+										<label for="payments-sort-05" class="select-box__label">Жигулёвский округ №161</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-06" name="payments-sort-0">
+										<label for="payments-sort-06" class="select-box__label">Тольяттинский округ №159</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-07" name="payments-sort-0">
+										<label for="payments-sort-07" class="select-box__label">Самарская область</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class="select-box__selected">Округ</span>
+					</div>
+					<div class="main-map__select select-box">
+						<div class="select-box__container">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option select-box__option--flex">
+										<input type="text" class="select-box__search" placeholder="Поиск">
+										<button class="select-box__search-btn">
+											<svg class="select-box__search-icon">
+												<use xlink:href="img/sprite.svg#icon-search"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-01" name="branches-sort-0">
+										<label for="branches-sort-01" class="select-box__label">Отделение №1</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-02" name="branches-sort-0">
+										<label for="branches-sort-02" class="select-box__label">Отделение №2</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-03" name="branches-sort-0">
+										<label for="branches-sort-03" class="select-box__label">Отделение №3</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-04" name="branches-sort-0">
+										<label for="branches-sort-04" class="select-box__label">Отделение №4</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-05" name="branches-sort-0">
+										<label for="branches-sort-05" class="select-box__label">Отделение №5</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-06" name="branches-sort-0">
+										<label for="branches-sort-06" class="select-box__label">Отделение №6</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-07" name="branches-sort-0">
+										<label for="branches-sort-07" class="select-box__label">Отделение №7</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class="select-box__selected">Отделение</span>
+					</div>
+					<div class="main-map__select select-box">
+						<div class="select-box__container">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option select-box__option--flex">
+										<input type="text" class="select-box__search" placeholder="Поиск">
+										<button class="select-box__search-btn">
+											<svg class="select-box__search-icon">
+												<use xlink:href="img/sprite.svg#icon-search"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-01" name="program-sort-0">
+										<label for="program-sort-01" class="select-box__label">Комплексное развитие сельских территорий</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-02" name="program-sort-0">
+										<label for="program-sort-02" class="select-box__label">Формирование комфортной городской среды</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-03" name="program-sort-0">
+										<label for="program-sort-03" class="select-box__label">Содействие</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-04" name="program-sort-0">
+										<label for="program-sort-04" class="select-box__label">Нацпроект «Здравоохранение»</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-05" name="program-sort-0">
+										<label for="program-sort-05" class="select-box__label">Нацпроект «Культура»</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-06" name="program-sort-0">
+										<label for="program-sort-06" class="select-box__label">Формирование комфортной городской среды</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-07" name="program-sort-0">
+										<label for="program-sort-07" class="select-box__label">Содействие</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class="select-box__selected">Программа/Проект</span>
+					</div>
+					<div class="main-map__select select-box">
+						<div class="select-box__container not-select">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="status-sort-01">
+										<label for="status-sort-01" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Без статуса</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="status-sort-02">
+										<label for="status-sort-02" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Исполнено</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="status-sort-03">
+										<label for="status-sort-03" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>В работе</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="status-sort-04">
+										<label for="status-sort-04" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Планируется</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<span class="select-box__selected">Статус <span class="select-box__value">0</span></span>
+					</div>
+				</div>
+			</div>
+			<div class="main-map__map"></div>
+		</div>
+		<!-- end of main map -->
+		<!-- footer -->
+		<footer class="footer @@footer">
+			<div class="footer__main">
+				<div class="container">
+					<nav class="footer-nav footer__nav">
+						<ul class="footer-nav__list">
+							<li class="footer-nav__item">
+								<a href="index.html" class="footer-nav__link">Главная</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="#" class="footer-nav__link">Карта</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="deputy.html" class="footer-nav__link">Депутаты</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="news.html" class="footer-nav__link">Новости</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="branches.html" class="footer-nav__link">Отделения</a>
+							</li>
+							<li class="footer-nav__item">
+								<a href="about-project.html" class="footer-nav__link">О проекте</a>
+							</li>
+						</ul>
+					</nav>
+					<p class="footer__copyright">Платформа "Народная программа" © 2022 Самарское региональное отделение партии "Единая Россия"</p>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="container">
+					<ul class="footer__list">
+						<li class="footer__item">
+							<a href="#" class="footer__link">Правовая информация</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Политика конфиденциальности</a>
+						</li>
+						<li class="footer__item">
+							<a href="#" class="footer__link">Противодействие коррупции</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+		<!-- end of footer -->
+	</div>
+	<!-- end of wrapper -->
+	<!-- modals -->
+	<!--<div class="modal" id="license-agreement">-->
+	<div class="modal" id="new-appeal">
+		<div class="modal__scroll">
+			<div class="modal__top">
+				<div class="modal__group">
+					<h3 class="modal__title">Лицензионное соглашение</h3>
+					<span class="modal__help">Ознакомьтесь и подтвердите согласие</span>
+				</div>
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="modal__main">
+				<div class="modal__content content">
+					<p>Все авторские и иные права на результаты интеллектуальной деятельности, находящиеся на Сайте и в его содержании, включая без ограничения тексты, иллюстрации, графические изображения и коды, имеющиеся на Сайте, а также в его внешнем виде и восприятии (собирательно «Содержимое») принадлежат Компании и/или членам ее группы компаний, или сторонним поставщикам услуг. Если не указано иное, пользователь вправе просматривать, копировать и распечатывать Содержимое только для своего собственного использования при условии, что на всех копиях Содержимого присутствуют отметки об авторских и иных имущественных правах, а также прочие условия об ответственности, помещенные на них на Сайте. Компания оставляет за собой право (но не обязана) в любое время изменять Содержимое. За исключением указанного выше, не допускается изменение или копирование в какой-либо форме Сайта или его Содержимого полностью или частично, в том числе путем кадрирования, включения в состав иных сайтов или иных публикаций, или использование для создания производных работ. Цитирование Содержания Сайта в информационных целях допускается без согласия Компании, но с обязательным указанием Сайта Компании в качестве источника информации. Не допускается использование товарных знаков Компании или членов ее группы компаний без предварительного письменного разрешения Компании. Компания сохраняет за собой все права на указанные товарные знаки. За исключением указанного выше, никакие находящиеся на Сайте материалы не означают предоставления каких-либо прав или лицензий. Компания не гарантирует пользователю портала право на использование имеющихся на Сайте материалов, принадлежащих третьим лицам, а также того, что для использования таких материалов не потребуется разрешения таких третьих лиц. Не допускается изменение Содержимого, а также изменение или удаление отметок об авторских правах или ссылок на автора, присутствующих в Содержимом, без предварительного разрешения Компании.</p>
+				</div>
+			</div>
+			<div class="modal__bottom">
+				<span class="modal__text">Соглашение 1 из 2</span>
+				<div class="modal__inner">
+					<a href="#" class="modal__btn btn">Я согласен</a>
+					<a href="#" class="modal__btn btn btn--transparent">Отмена</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="new-appea">
+		<div class="modal__scroll">
+			<div class="modal__top">
+				<div class="modal__group">
+					<h3 class="modal__title">Новое обращение</h3>
+				</div>
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="modal__main">
+				<form action="#" class="modal-form"></form>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="district">
+		<div class="modal__scroll">
+			<div class="modal__top">
+				<div class="modal__group">
+					<h3 class="modal__title">Самарский округ №2</h3>
+					<p class="modal__description">2 представителя</p>
+				</div>
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="modal__main">
+				<div class="district">
+					<a href="deputy-card.html" class="district__item">
+						<div class="district__body">
+							<span class="district__name">Балтер Роман Евгеньевич</span>
+							<span class="district__help">Депутат <br>Самарская Губернская Дума</span>
+						</div>
+						<picture class="district__ava">
+							<img src="img/district-01.png" alt="Image">
+						</picture>
+					</a>
+					<a href="deputy-card.html" class="district__item">
+						<div class="district__body">
+							<span class="district__name">Ильина Светлана Сергеевна</span>
+							<span class="district__help">Депутат <br>Самарская Губернская Дума</span>
+						</div>
+						<picture class="district__ava">
+							<img src="img/district-02.png" alt="Image">
+						</picture>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-overlay"></div>
+	<!-- end of modals -->
+	<!-- scripts -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="js/vendor.min.js"></script>
+	<script src="js/app.min.js"></script>
+	<script src="js/calendar.js"></script>
+</body>
+
+</html>
