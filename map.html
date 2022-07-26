@@ -6,13 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Народная программа - Карта</title>
-	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-	<link rel="manifest" href="favicon/site.webmanifest">
-	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="theme-color" content="#ffffff">
+	<!--<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">-->
 	<!-- styles -->
 	<link rel="stylesheet" href="css/vendor.min.css">
 	<link rel="stylesheet" href="css/app.min.css">
@@ -62,10 +62,36 @@
 			</div>
 		</header>
 		<!-- end of header -->
+		<!-- mobile menu -->
+		<div class="mobile-menu" id="mobile-menu">
+			<nav class="nav mobile-menu__nav">
+				<ul class="nav__list">
+					<li class="nav__item @@main">
+						<a class="nav__link" href="index.html">Главная</a>
+					</li>
+					<li class="nav__item @@maps">
+						<a class="nav__link" href="map.html">Карта</a>
+					</li>
+					<li class="nav__item @@deputy">
+						<a class="nav__link" href="deputy.html">Депутаты</a>
+					</li>
+					<li class="nav__item @@news">
+						<a class="nav__link" href="news.html">Новости</a>
+					</li>
+					<li class="nav__item @@branches">
+						<a class="nav__link" href="branches.html">Отделения</a>
+					</li>
+					<li class="nav__item @@about-project">
+						<a class="nav__link" href="about-project.html">О проекте</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- end of mobile menu -->
 		<!-- main map -->
 		<div class="main-map" id="main-map">
 			<div class="main-map__filters">
-				<button class="main-map__trigger">
+				<button class="main-map__trigger" id="filter-toggle">
 					<svg class="main-map__trigger-icon">
 						<use xlink:href="img/sprite.svg#icon-filter"></use>
 					</svg>
@@ -206,7 +232,9 @@
 								</div>
 							</div>
 						</div>
-						<span class="select-box__selected">Округ</span>
+						<div class="select-box__select">
+							<span class="select-box__selected">Округ</span>
+						</div>
 					</div>
 					<div class="main-map__select select-box">
 						<div class="select-box__container">
@@ -251,7 +279,9 @@
 								</div>
 							</div>
 						</div>
-						<span class="select-box__selected">Отделение</span>
+						<div class="select-box__select">
+							<span class="select-box__selected">Отделение</span>
+						</div>
 					</div>
 					<div class="main-map__select select-box">
 						<div class="select-box__container">
@@ -296,9 +326,11 @@
 								</div>
 							</div>
 						</div>
-						<span class="select-box__selected">Программа/Проект</span>
+						<div class="select-box__select">
+							<span class="select-box__selected">Программа/Проект</span>
+						</div>
 					</div>
-					<div class="main-map__select select-box">
+					<div class="main-map__select main-map__select--sm select-box">
 						<div class="select-box__container not-select">
 							<div class="select-box__wrap" data-simplebar>
 								<div class="select-box__scroll">
@@ -333,13 +365,432 @@
 								</div>
 							</div>
 						</div>
-						<span class="select-box__selected">Статус <span class="select-box__value">0</span></span>
+						<div class="select-box__select">
+							<span class="select-box__selected">Статус</span>
+							<span class="select-box__value select-box__value--hidden">0</span>
+						</div>
+					</div>
+					<div class="main-map__select main-map__select--sm select-box">
+						<div class="select-box__container not-select">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="level-sort-01">
+										<label for="level-sort-01" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Федеральный</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="level-sort-02">
+										<label for="level-sort-02" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Региональный</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="level-sort-03">
+										<label for="level-sort-03" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Муниципальный</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="select-box__select">
+							<span class="select-box__selected">Уровень</span>
+							<span class="select-box__value select-box__value--hidden">0</span>
+						</div>
+					</div>
+					<div class="main-map__select main-map__select--sm select-box">
+						<div class="select-box__container not-select">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-01">
+										<label for="industry-sort-01" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Жильё и благоустройство</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-02">
+										<label for="industry-sort-02" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Образование</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-03">
+										<label for="industry-sort-03" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Спорт</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-04">
+										<label for="industry-sort-04" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Культура</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-05">
+										<label for="industry-sort-05" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Дороги и мосты</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-06">
+										<label for="industry-sort-06" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Здравоохранение</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-07">
+										<label for="industry-sort-07" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Социальное развитие</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-08">
+										<label for="industry-sort-08" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Экология</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-09">
+										<label for="industry-sort-09" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Сельское хозяйство</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="select-box__select">
+							<span class="select-box__selected">Отрасль</span>
+							<span class="select-box__value select-box__value--hidden">0</span>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="main-map__map"></div>
 		</div>
 		<!-- end of main map -->
+		<!-- filter -->
+		<div class="filter" id="filter">
+			<div class="filter__top">
+				<h3 class="filter__title">Фильтр</h3>
+				<button class="filter__close" id="filter-close" aria-label="Закрыть">
+					<svg class="filter__close-icon">
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="filter__main">
+				<div class="filter__controls">
+					<div class="filter__select select-box">
+						<div class="select-box__container">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option select-box__option--flex">
+										<input type="text" class="select-box__search" placeholder="Поиск">
+										<button class="select-box__search-btn">
+											<svg class="select-box__search-icon">
+												<use xlink:href="img/sprite.svg#icon-search"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-01" name="payments-sort-0">
+										<label for="payments-sort-01" class="select-box__label">Самарская область</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-02" name="payments-sort-0">
+										<label for="payments-sort-02" class="select-box__label">Самарский округ №158</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-03" name="payments-sort-0">
+										<label for="payments-sort-03" class="select-box__label">Тольяттинский округ №159</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-04" name="payments-sort-0">
+										<label for="payments-sort-04" class="select-box__label">Красноглинский округ №160</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-05" name="payments-sort-0">
+										<label for="payments-sort-05" class="select-box__label">Жигулёвский округ №161</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-06" name="payments-sort-0">
+										<label for="payments-sort-06" class="select-box__label">Тольяттинский округ №159</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="payments-sort-07" name="payments-sort-0">
+										<label for="payments-sort-07" class="select-box__label">Самарская область</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="select-box__select">
+							<span class="select-box__selected">Округ</span>
+						</div>
+					</div>
+					<div class="filter__select select-box">
+						<div class="select-box__container">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option select-box__option--flex">
+										<input type="text" class="select-box__search" placeholder="Поиск">
+										<button class="select-box__search-btn">
+											<svg class="select-box__search-icon">
+												<use xlink:href="img/sprite.svg#icon-search"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-01" name="branches-sort-0">
+										<label for="branches-sort-01" class="select-box__label">Отделение №1</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-02" name="branches-sort-0">
+										<label for="branches-sort-02" class="select-box__label">Отделение №2</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-03" name="branches-sort-0">
+										<label for="branches-sort-03" class="select-box__label">Отделение №3</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-04" name="branches-sort-0">
+										<label for="branches-sort-04" class="select-box__label">Отделение №4</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-05" name="branches-sort-0">
+										<label for="branches-sort-05" class="select-box__label">Отделение №5</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-06" name="branches-sort-0">
+										<label for="branches-sort-06" class="select-box__label">Отделение №6</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="branches-sort-07" name="branches-sort-0">
+										<label for="branches-sort-07" class="select-box__label">Отделение №7</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="select-box__select">
+							<span class="select-box__selected">Отделение</span>
+						</div>
+					</div>
+					<div class="filter__select select-box">
+						<div class="select-box__container">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option select-box__option--flex">
+										<input type="text" class="select-box__search" placeholder="Поиск">
+										<button class="select-box__search-btn">
+											<svg class="select-box__search-icon">
+												<use xlink:href="img/sprite.svg#icon-search"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-01" name="program-sort-0">
+										<label for="program-sort-01" class="select-box__label">Комплексное развитие сельских территорий</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-02" name="program-sort-0">
+										<label for="program-sort-02" class="select-box__label">Формирование комфортной городской среды</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-03" name="program-sort-0">
+										<label for="program-sort-03" class="select-box__label">Содействие</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-04" name="program-sort-0">
+										<label for="program-sort-04" class="select-box__label">Нацпроект «Здравоохранение»</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-05" name="program-sort-0">
+										<label for="program-sort-05" class="select-box__label">Нацпроект «Культура»</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-06" name="program-sort-0">
+										<label for="program-sort-06" class="select-box__label">Формирование комфортной городской среды</label>
+									</div>
+									<div class="select-box__option">
+										<input type="radio" class="select-box__radio" id="program-sort-07" name="program-sort-0">
+										<label for="program-sort-07" class="select-box__label">Содействие</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="select-box__select">
+							<span class="select-box__selected">Программа/Проект</span>
+						</div>
+					</div>
+					<div class="filter__select select-box">
+						<div class="select-box__container not-select">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="status-sort-01">
+										<label for="status-sort-01" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Без статуса</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="status-sort-02">
+										<label for="status-sort-02" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Исполнено</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="status-sort-03">
+										<label for="status-sort-03" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>В работе</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="status-sort-04">
+										<label for="status-sort-04" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Планируется</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="select-box__select">
+							<span class="select-box__selected">Статус</span>
+							<span class="select-box__value select-box__value--hidden">0</span>
+						</div>
+					</div>
+					<div class="filter__select select-box">
+						<div class="select-box__container not-select">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="level-sort-01">
+										<label for="level-sort-01" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Федеральный</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="level-sort-02">
+										<label for="level-sort-02" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Региональный</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="level-sort-03">
+										<label for="level-sort-03" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Муниципальный</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="select-box__select">
+							<span class="select-box__selected">Уровень</span>
+							<span class="select-box__value select-box__value--hidden">0</span>
+						</div>
+					</div>
+					<div class="filter__select select-box">
+						<div class="select-box__container not-select">
+							<div class="select-box__wrap" data-simplebar>
+								<div class="select-box__scroll">
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-01">
+										<label for="industry-sort-01" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Жильё и благоустройство</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-02">
+										<label for="industry-sort-02" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Образование</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-03">
+										<label for="industry-sort-03" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Спорт</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-04">
+										<label for="industry-sort-04" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Культура</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-05">
+										<label for="industry-sort-05" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Дороги и мосты</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-06">
+										<label for="industry-sort-06" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Здравоохранение</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-07">
+										<label for="industry-sort-07" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Социальное развитие</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-08">
+										<label for="industry-sort-08" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Экология</span>
+										</label>
+									</div>
+									<div class="select-box__option">
+										<input type="checkbox" class="select-box__checkbox" id="industry-sort-09">
+										<label for="industry-sort-09" class="select-box__label">
+											<span class="select-box__label-icon"></span>
+											<span>Сельское хозяйство</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="select-box__select">
+							<span class="select-box__selected">Отрасль</span>
+							<span class="select-box__value select-box__value--hidden">0</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filter__bottom">
+				<a href="#" class="filter__btn btn">Применить</a>
+			</div>
+		</div>
+		<!-- end of filter -->
 		<!-- footer -->
 		<footer class="footer @@footer">
 			<div class="footer__main">
