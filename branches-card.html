@@ -218,7 +218,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="tabs__wrapper"></div>
+								<div class="tabs__wrapper">
+									<div class="deputy-card__map-wrap">
+										<div class="deputy-card__map" id="YMapsID"></div>
+									</div>
+								</div>
 								<div class="tabs__wrapper">
 									<div class="deputy-card__block">
 										<div class="calendar-container">
@@ -527,6 +531,26 @@
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
 	<script src="js/calendar.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=0e261c56-fd3d-4342-9953-19a4b4ebfce3&lang=ru_RU" type="text/javascript"></script>
+	<script type="text/javascript">
+		ymaps.ready(function() {
+			var myMap = new ymaps.Map("YMapsID", {
+				center: [55.749998, 37.606325],
+				zoom: 12,
+				controls: []
+			}, {
+				suppressMapOpenBlock: true
+			});
+
+			var myPlacemark = new ymaps.Placemark([55.749998, 37.606325], {}, {
+				iconLayout: "default#imageWithContent",
+				iconImageHref: "img/dist/icon-balloon.svg",
+				iconImageSize: [74, 48],
+				iconImageOffset: [-12, -50],
+			})
+			myMap.geoObjects.add(myPlacemark);
+		});
+	</script>
 </body>
 
 </html>
