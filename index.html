@@ -100,7 +100,7 @@
 							реализация, контроль
 						</p>
 						<div class="hero__btns">
-							<a class="hero__btn btn" href="#">О проекте</a>
+							<a class="hero__btn btn btn--white" href="#">О проекте</a>
 							<a class="hero__btn btn btn--transparent" href="#">Открыть карту</a>
 						</div>
 					</div>
@@ -167,8 +167,8 @@
 						</div>
 					</div>
 					<div class="about__btns  wow animate__animated animate__fadeIn" data-wow-delay=".5s" data-wow-duration="1s">
-						<a class="about__btn btn btn--blue" href="#">Депутаты</a>
-						<a class="about__btn btn btn--transparent" href="#">Открыть карту</a>
+						<a class="about__btn btn" href="#">Депутаты</a>
+						<a class="about__btn btn btn--transparent-blue" href="#">Открыть карту</a>
 					</div>
 				</div>
 				<img class="about__line about__line-1 wow upline" src="img/page/about-line-1.png" alt="line">
@@ -195,7 +195,7 @@
 								<p class="projects__item-info">Лучшее будущее России: строительство и ремонт школ, больниц, домов
 									культуры. Новые рабочие места. Помощь семьям. Новые дороги, построенные по современным технологиям
 								</p>
-								<a class="projects__item-btn btn btn--transparent" href="#">Открыть карту</a>
+								<a class="projects__item-btn btn btn--transparent-blue href=" #">Открыть карту</a>
 							</div>
 							<img class="projects__item-icon" src="img/svg/projects-1.svg" alt="иконка" width="100" height="100">
 						</div>
@@ -205,7 +205,7 @@
 								<p class="projects__item-info">Обустройство общественных пространств по всей России. Проекты, созданные
 									и одобренные местными жителями. Большая страна, где в каждом селе и городе можно жить с удовольствием
 								</p>
-								<a class="projects__item-btn btn btn--transparent" href="#">Открыть карту</a>
+								<a class="projects__item-btn btn btn--transparent-blue" href="#">Открыть карту</a>
 							</div>
 							<img class="projects__item-icon" src="img/svg/projects-2.svg" alt="иконка" width="100" height="100">
 						</div>
@@ -216,7 +216,7 @@
 									общественными организациями. Сохранение народной культуры, помощь уязвимым семьям, поддержка локальных
 									сообществ
 								</p>
-								<a class="projects__item-btn btn btn--transparent" href="#">Открыть карту</a>
+								<a class="projects__item-btn btn btn--transparent-blue" href="#">Открыть карту</a>
 							</div>
 							<img class="projects__item-icon" src="img/svg/projects-3.svg" alt="иконка" width="100" height="100">
 						</div>
@@ -226,7 +226,7 @@
 								<p class="projects__item-info">Региональная программа Самарской области. Благоустройство общественных
 									пространств, новая инфраструктура для села, создание комфортного пространства в каждой точке региона
 								</p>
-								<a class="projects__item-btn btn btn--transparent" href="#">Открыть карту</a>
+								<a class="projects__item-btn btn btn--transparent-blue" href="#">Открыть карту</a>
 							</div>
 							<img class="projects__item-icon" src="img/svg/projects-4.svg" alt="иконка" width="100" height="100">
 						</div>
@@ -237,7 +237,7 @@
 									играют местные сообщества. Софинансирование, соучастие, содружество — новое рождается только общими
 									усилиями
 								</p>
-								<a class="projects__item-btn btn btn--transparent" href="#">Открыть карту</a>
+								<a class="projects__item-btn btn btn--transparent-blue" href="#">Открыть карту</a>
 							</div>
 							<img class="projects__item-icon" src="img/svg/projects-5.svg" alt="иконка" width="100" height="100">
 						</div>
@@ -326,7 +326,7 @@
 									<input id="privacy" type="checkbox" value="1" name="privacy" data-error=".privacy-error">
 									<label for="privacy">
 										<span>
-											Я ознакомился и соглашаюсь с <a href="#">условиями пользовательского соглашения</a> и <a href="#">политикой конфиденциальности</a>
+											Я ознакомился и соглашаюсь с <a href="#" class="modal-btn" data-id="license-agreement">условиями пользовательского соглашения</a> и <a href="#" class="modal-btn" data-id="license-agreement">политикой конфиденциальности</a>
 										</span>
 									</label>
 								</div>
@@ -436,6 +436,117 @@
 		<!-- end of footer -->
 	</div>
 	<!-- end of wrapper -->
+	<!-- modals -->
+	<div class="modal" id="license-agreement">
+		<div class="modal__wrapper">
+			<div class="modal__top modal__top--border">
+				<div class="modal__group">
+					<h3 class="modal__title">Лицензионное соглашение</h3>
+					<span class="modal__help">Ознакомьтесь и подтвердите согласие</span>
+				</div>
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="modal__scroll" data-simplebar>
+				<div class="modal__container">
+					<div class="modal__content content">
+						<p>Все авторские и иные права на результаты интеллектуальной деятельности, находящиеся на Сайте и в его содержании, включая без ограничения тексты, иллюстрации, графические изображения и коды, имеющиеся на Сайте, а также в его внешнем виде и восприятии (собирательно «Содержимое») принадлежат Компании и/или членам ее группы компаний, или сторонним поставщикам услуг. Если не указано иное, пользователь вправе просматривать, копировать и распечатывать Содержимое только для своего собственного использования при условии, что на всех копиях Содержимого присутствуют отметки об авторских и иных имущественных правах, а также прочие условия об ответственности, помещенные на них на Сайте. Компания оставляет за собой право (но не обязана) в любое время изменять Содержимое. За исключением указанного выше, не допускается изменение или копирование в какой-либо форме Сайта или его Содержимого полностью или частично, в том числе путем кадрирования, включения в состав иных сайтов или иных публикаций, или использование для создания производных работ. Цитирование Содержания Сайта в информационных целях допускается без согласия Компании, но с обязательным указанием Сайта Компании в качестве источника информации. Не допускается использование товарных знаков Компании или членов ее группы компаний без предварительного письменного разрешения Компании. Компания сохраняет за собой все права на указанные товарные знаки. За исключением указанного выше, никакие находящиеся на Сайте материалы не означают предоставления каких-либо прав или лицензий. Компания не гарантирует пользователю портала право на использование имеющихся на Сайте материалов, принадлежащих третьим лицам, а также того, что для использования таких материалов не потребуется разрешения таких третьих лиц. Не допускается изменение Содержимого, а также изменение или удаление отметок об авторских правах или ссылок на автора, присутствующих в Содержимом, без предварительного разрешения Компании.</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal__bottom">
+				<span class="modal__text">Соглашение 1 из 2</span>
+				<div class="modal__inner">
+					<a href="#" class="modal__btn btn">Я согласен</a>
+					<a href="#" class="modal__btn btn btn--transparent">Отмена</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="new-appeal">
+		<div class="modal__wrapper">
+			<div class="modal__top">
+				<div class="modal__group">
+					<h3 class="modal__title">Новое обращение</h3>
+				</div>
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="modal__scroll" data-simplebar>
+				<div class="modal__container">
+					<form action="#" class="modal-form"></form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="object">
+		<div class="modal__wrapper">
+			<div class="modal__top modal__top--done">
+				<div class="modal__group">
+					<span class="modal__status">Исполнено</span>
+					<h3 class="modal__title">Ремонт Дома культуры</h3>
+					<p class="modal__description">Ремонт Дома культуры на 285 мест, 867,2 кв.м</p>
+				</div>
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="modal__scroll" data-simplebar>
+				<div class="modal__container">
+					<form action="#" class="modal-form"></form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="district">
+		<div class="modal__wrapper">
+			<div class="modal__top">
+				<div class="modal__group">
+					<h3 class="modal__title">Самарский округ №2</h3>
+					<p class="modal__description">2 представителя</p>
+				</div>
+				<button class="modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="modal__scroll" data-simplebar>
+				<div class="modal__container">
+					<div class="district">
+						<a href="deputy-card.html" class="district__item">
+							<div class="district__body">
+								<span class="district__name">Балтер Роман Евгеньевич</span>
+								<span class="district__help">Депутат <br>Самарская Губернская Дума</span>
+							</div>
+							<picture class="district__ava">
+								<img src="img/district-01.png" alt="Image">
+							</picture>
+						</a>
+						<a href="deputy-card.html" class="district__item">
+							<div class="district__body">
+								<span class="district__name">Ильина Светлана Сергеевна</span>
+								<span class="district__help">Депутат <br>Самарская Губернская Дума</span>
+							</div>
+							<picture class="district__ava">
+								<img src="img/district-02.png" alt="Image">
+							</picture>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-overlay"></div>
+	<!-- end of modals -->
 	<!-- scripts -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="js/vendor.min.js"></script>
