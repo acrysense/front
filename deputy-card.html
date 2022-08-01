@@ -116,7 +116,7 @@
 							<picture class="deputy-card__ava">
 								<img src="img/deputy-ava.png" alt="Image">
 							</picture>
-							<a href="#" class="deputy-card__btn btn modal-btn" data-id="object">Написать обращение</a>
+							<a href="#" class="deputy-card__btn btn modal-btn" data-id="new-appeal">Написать обращение</a>
 							<ul class="c-contacts deputy-card__contacts">
 								<li class="c-contacts__item">
 									<a href="tel:+79272105333" class="c-contacts__link">
@@ -960,7 +960,7 @@
 					<h3 class="modal__title">Лицензионное соглашение</h3>
 					<span class="modal__help">Ознакомьтесь и подтвердите согласие</span>
 				</div>
-				<button class="modal__close">
+				<button class="modal__close-btn modal__close">
 					<svg class="modal__close-icon">
 						<use xlink:href="img/sprite.svg#icon-close"></use>
 					</svg>
@@ -976,19 +976,20 @@
 			<div class="modal__bottom">
 				<span class="modal__text">Соглашение 1 из 2</span>
 				<div class="modal__inner">
-					<a href="#" class="modal__btn btn">Я согласен</a>
-					<a href="#" class="modal__btn btn btn--transparent">Отмена</a>
+					<a href="#" class="modal__btn btn modal-btn" data-id="license-agreement-second">Я согласен</a>
+					<a href="#" class="modal__btn btn btn--transparent-blue modal__close">Отмена</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="modal" id="new-appeal">
+	<div class="modal" id="license-agreement-second">
 		<div class="modal__wrapper">
-			<div class="modal__top">
+			<div class="modal__top modal__top--border">
 				<div class="modal__group">
-					<h3 class="modal__title">Новое обращение</h3>
+					<h3 class="modal__title">Лицензионное соглашение</h3>
+					<span class="modal__help">Ознакомьтесь и подтвердите согласие</span>
 				</div>
-				<button class="modal__close">
+				<button class="modal__close-btn modal__close">
 					<svg class="modal__close-icon">
 						<use xlink:href="img/sprite.svg#icon-close"></use>
 					</svg>
@@ -996,28 +997,280 @@
 			</div>
 			<div class="modal__scroll" data-simplebar>
 				<div class="modal__container">
-					<form action="#" class="modal-form"></form>
+					<div class="modal__content content">
+						<p>Все авторские и иные права на результаты интеллектуальной деятельности, находящиеся на Сайте и в его содержании, включая без ограничения тексты, иллюстрации, графические изображения и коды, имеющиеся на Сайте, а также в его внешнем виде и восприятии (собирательно «Содержимое») принадлежат Компании и/или членам ее группы компаний, или сторонним поставщикам услуг. Если не указано иное, пользователь вправе просматривать, копировать и распечатывать Содержимое только для своего собственного использования при условии, что на всех копиях Содержимого присутствуют отметки об авторских и иных имущественных правах, а также прочие условия об ответственности, помещенные на них на Сайте. Компания оставляет за собой право (но не обязана) в любое время изменять Содержимое. За исключением указанного выше, не допускается изменение или копирование в какой-либо форме Сайта или его Содержимого полностью или частично, в том числе путем кадрирования, включения в состав иных сайтов или иных публикаций, или использование для создания производных работ. Цитирование Содержания Сайта в информационных целях допускается без согласия Компании, но с обязательным указанием Сайта Компании в качестве источника информации. Не допускается использование товарных знаков Компании или членов ее группы компаний без предварительного письменного разрешения Компании. Компания сохраняет за собой все права на указанные товарные знаки. За исключением указанного выше, никакие находящиеся на Сайте материалы не означают предоставления каких-либо прав или лицензий. Компания не гарантирует пользователю портала право на использование имеющихся на Сайте материалов, принадлежащих третьим лицам, а также того, что для использования таких материалов не потребуется разрешения таких третьих лиц. Не допускается изменение Содержимого, а также изменение или удаление отметок об авторских правах или ссылок на автора, присутствующих в Содержимом, без предварительного разрешения Компании.</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal__bottom">
+				<span class="modal__text">Соглашение 2 из 2</span>
+				<div class="modal__inner">
+					<a href="#" class="modal__btn btn modal__close">Я согласен</a>
+					<a href="#" class="modal__btn btn btn--transparent-blue modal__close">Отмена</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal--short" id="new-appeal">
+		<div class="modal__wrapper">
+			<div class="modal__top">
+				<div class="modal__group">
+					<h3 class="modal__title">Новое обращение</h3>
+				</div>
+				<button class="modal__close-btn modal__close">
+					<svg class="modal__close-icon">
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="modal__scroll" data-simplebar>
+				<div class="modal__container">
+					<form id="feedback_form">
+						<div class="form-group">
+							<input type="text" name="last_name" class="form-control" placeholder="Фамилия" value="" required>
+						</div>
+						<div class="form-group">
+							<input type="text" name="first_name" class="form-control" placeholder="Имя" value="" required>
+						</div>
+						<div class="form-group">
+							<input type="text" name="phone" class="form-control" placeholder="Телефон" value="" required>
+						</div>
+						<div class="form-group">
+							<input type="text" name="email" class="form-control" placeholder="Email" value="" required>
+						</div>
+						<div class="form-group">
+							<input type="text" name="address" class="form-control" placeholder="Адрес" value="" required>
+						</div>
+						<div class="form-group form-dropdown" style="display: none">
+							<div class="dropdown">
+								<input type="checkbox" class="dropdown__switch" id="filter-switch" hidden />
+								<label for="filter-switch" class="dropdown__options-filter">
+									<ul class="dropdown__filter" role="listbox" tabindex="-1">
+										<li class="dropdown__filter-selected" aria-selected="true">
+											Выберите округ
+										</li>
+										<li>
+											<ul class="dropdown__select">
+												<li class="dropdown__select-option" role="option">
+													Городской округ Самара
+												</li>
+												<li class="dropdown__select-option" role="option">
+													Гоc. Дума Самарская область
+												</li>
+												<li class="dropdown__select-option" role="option">
+													Самарская Губернская дума
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<input type="text" name="text" class="form-control" placeholder="Текст обращения" value="" required>
+						</div>
+						<div class="form-group">
+							<div class="custom-file attach">
+								<input type="file" class="custom-file-input" id="file" data-file-list=".file-list" multiple>
+								<label class="custom-file-label" for="file">
+									Прикрепить файлы
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect width="24" height="24" rx="12" fill="#1254D3" />
+										<path d="M12 7V17M7 12H17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</label>
+								<div class="error file-error" style="display: none"></div>
+							</div>
+							<small class="form-control-hint attach-hint">до 5 файлов общим размером до 5 mb</small>
+							<ul id="fileList" class="file-list"></ul>
+						</div>
+						<div class="form-group">
+							<div class="form-group-checkbox privacy-modal">
+								<input id="privacy" type="checkbox" value="1" name="privacy" data-error=".privacy-error">
+								<label for="privacy">
+									<span>
+										Я ознакомился и соглашаюсь с <a href="#" class="modal-btn" data-id="license-agreement">условиями пользовательского соглашения</a> и <a href="#" class="modal-btn" data-id="license-agreement">политикой конфиденциальности</a>
+									</span>
+								</label>
+							</div>
+							<div class="privacy-error"></div>
+							<div class="modal" id="first-doc" style="display:none;">
+								<h4 class="projects__item-info">Текст документа пользовательского соглашения</h4>
+								<div class="projects__item-info scrolling-box">
+									<p class="projects__item-info">Товарищи! укрепление и развитие структуры требуют от нас анализа дальнейших направлений развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития.</p>
+									<p class="projects__item-info">Задача организации, в особенности же новая модель организационной деятельности представляет собой интересный эксперимент проверки модели развития. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании модели развития. Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа систем массового участия. Разнообразный и богатый опыт сложившаяся структура организации влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Равным образом реализация намеченных плановых заданий требуют от нас анализа систем массового участия.</p>
+									<p class="projects__item-info">Таким образом реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации новых предложений. Разнообразный и богатый опыт консультация с широким активом позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач.</p>
+									<p class="projects__item-info">Задача организации, в особенности же укрепление и развитие структуры играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Равным образом новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения соответствующий условий активизации. Равным образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности требуют определения и уточнения дальнейших направлений развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
+									<p class="projects__item-info">Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития. Не следует, однако забывать, что консультация с широким активом влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Товарищи! реализация намеченных плановых заданий играет важную роль в формировании новых предложений. Таким образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации существенных финансовых и административных условий. Повседневная практика показывает, что рамки и место обучения кадров способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что рамки и место обучения кадров играет важную роль в формировании существенных финансовых и административных условий.</p>
+								</div>
+								<p>
+									<a class="projects__item-btn btn btn--transparent" data-modal="#second-doc">Согласен</a>
+									<a href="#" rel="modal:close" style="margin-left: 10px">Отмена</a>
+								</p>
+							</div>
+							<div class="modal" id="second-doc" style="display:none;">
+								<h4 class="projects__item-info">Текст документа политики конфиденциальности</h4>
+								<div class="projects__item-info scrolling-box">
+									<p class="projects__item-info">Товарищи! укрепление и развитие структуры требуют от нас анализа дальнейших направлений развития. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития.</p>
+									<p class="projects__item-info">Задача организации, в особенности же новая модель организационной деятельности представляет собой интересный эксперимент проверки модели развития. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании модели развития. Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа систем массового участия. Разнообразный и богатый опыт сложившаяся структура организации влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Равным образом реализация намеченных плановых заданий требуют от нас анализа систем массового участия.</p>
+									<p class="projects__item-info">Таким образом реализация намеченных плановых заданий в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Равным образом реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации новых предложений. Разнообразный и богатый опыт консультация с широким активом позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач.</p>
+									<p class="projects__item-info">Задача организации, в особенности же укрепление и развитие структуры играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Равным образом новая модель организационной деятельности в значительной степени обуславливает создание направлений прогрессивного развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения соответствующий условий активизации. Равным образом сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности требуют определения и уточнения дальнейших направлений развития. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.</p>
+									<p class="projects__item-info">Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития. Не следует, однако забывать, что консультация с широким активом влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Товарищи! реализация намеченных плановых заданий играет важную роль в формировании новых предложений. Таким образом постоянный количественный рост и сфера нашей активности способствует подготовки и реализации существенных финансовых и административных условий. Повседневная практика показывает, что рамки и место обучения кадров способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что рамки и место обучения кадров играет важную роль в формировании существенных финансовых и административных условий.</p>
+								</div>
+								<p>
+									<a class="projects__item-btn btn btn--transparent confirm-privacy" href="#" rel="modal:close">Согласен</a>
+									<a href="#" rel="modal:close" style="margin-left: 10px">Отмена</a>
+								</p>
+							</div>
+						</div>
+						<div class="form-group form-group-submit">
+							<button class="btn btn-submit" type="submit">Отправить</button>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="modal" id="object">
 		<div class="modal__wrapper">
+			<!-- or 'modal__top--work' or 'modal__top--plan' -->
 			<div class="modal__top modal__top--done">
 				<div class="modal__group">
 					<span class="modal__status">Исполнено</span>
 					<h3 class="modal__title">Ремонт Дома культуры</h3>
 					<p class="modal__description">Ремонт Дома культуры на 285 мест, 867,2 кв.м</p>
 				</div>
-				<button class="modal__close">
+				<button class="modal__close-btn modal__close">
 					<svg class="modal__close-icon">
 						<use xlink:href="img/sprite.svg#icon-close"></use>
 					</svg>
 				</button>
 			</div>
+			<div class="modal__slider object-slider">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<picture class="object-slider__img">
+								<img src="img/content-slider.png" alt="Image">
+							</picture>
+						</div>
+						<div class="swiper-slide">
+							<picture class="object-slider__img">
+								<img src="img/content-slider.png" alt="Image">
+							</picture>
+						</div>
+						<div class="swiper-slide">
+							<picture class="object-slider__img">
+								<img src="img/content-slider.png" alt="Image">
+							</picture>
+						</div>
+						<div class="swiper-slide">
+							<picture class="object-slider__img">
+								<img src="img/content-slider.png" alt="Image">
+							</picture>
+						</div>
+					</div>
+					<button class="swiper-button-prev" aria-label="Назад">
+						<svg class="swiper-button-icon">
+							<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+						</svg>
+					</button>
+					<div class="swiper-pagination"></div>
+					<button class="swiper-button-next" aria-label="Далее">
+						<svg class="swiper-button-icon">
+							<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
 			<div class="modal__scroll" data-simplebar>
 				<div class="modal__container">
-					<form action="#" class="modal-form"></form>
+					<div class="object">
+						<div class="object__block">
+							<div class="object__inner">
+								<span class="object__subtitle">Проект:</span>
+								<span class="object__text">Нацпроект «Культура»</span>
+							</div>
+							<div class="object__inner">
+								<span class="object__subtitle">Об объекте:</span>
+								<span class="object__text">Самарская область, Челно-Вершинский район, Старое Эштебенькино, Школьная 66</span>
+							</div>
+							<div class="object__inner">
+								<span class="object__subtitle">Вид работ:</span>
+								<span class="object__text">Ремонт общественных зданий</span>
+							</div>
+							<div class="object__inner">
+								<span class="object__subtitle">Срок исполнения:</span>
+								<span class="object__text">2021</span>
+							</div>
+							<div class="object__inner">
+								<span class="object__subtitle">Статус:</span>
+								<div class="object__text">
+									<!-- or 'object__status--work' or 'object__status--plan' -->
+									<span class="object__status object__status--done">Исполнено</span>
+								</div>
+							</div>
+						</div>
+						<div class="object__block">
+							<h3 class="object__heading">Депутаты</h3>
+							<div class="object-deputy">
+								<div class="object-deputy__item">
+									<div class="object-deputy__body">
+										<h3 class="object-deputy__title">Казаков Виктор Алексеевич</h3>
+										<span class="object-deputy__help">Государственная Дума РФ, Красноглинский округ №160</span>
+									</div>
+									<picture class="object-deputy__img">
+										<img src="img/deputy-01.png" alt="Image">
+									</picture>
+								</div>
+								<div class="object-deputy__item">
+									<div class="object-deputy__body">
+										<h3 class="object-deputy__title">Субботин Владимир Анатольевич</h3>
+										<span class="object-deputy__help">Самарская Губернская Дума, Похвистневский округ №15</span>
+									</div>
+									<picture class="object-deputy__img">
+										<img src="img/deputy-02.png" alt="Image">
+									</picture>
+								</div>
+								<div class="object-deputy__item">
+									<div class="object-deputy__body">
+										<h3 class="object-deputy__title">Кузнецов Виктор Александрович</h3>
+										<span class="object-deputy__help">Самарская Губернская Дума, Похвистневский округ №15</span>
+									</div>
+									<picture class="object-deputy__img">
+										<img src="img/deputy-03.png" alt="Image">
+									</picture>
+								</div>
+							</div>
+						</div>
+						<div class="object__block">
+							<h3 class="object__heading">Отделение партии</h3>
+							<div class="object-deputy">
+								<div class="object-deputy__item">
+									<div class="object-deputy__body">
+										<h3 class="object-deputy__title">Отделение городского округа Жигулевск</h3>
+										<span class="object-deputy__help">г. Жигулевск, ул. Мира, 10</span>
+									</div>
+								</div>
+								<div class="object-deputy__item">
+									<div class="object-deputy__body">
+										<h3 class="object-deputy__title">Отделение городского округа Кинель</h3>
+										<span class="object-deputy__help">г. Кинель, ул. Мира, д. 42а, каб. 102</span>
+									</div>
+								</div>
+								<div class="object-deputy__item">
+									<div class="object-deputy__body">
+										<h3 class="object-deputy__title">Отделение городского округа Новокуйбышевск</h3>
+										<span class="object-deputy__help">г. Новокуйбышевск, ул. Миронова, 6</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="object__buttons">
+							<a href="#" class="object__btn btn">Создать задачу</a>
+							<a href="#" class="object__btn btn btn--transparent-blue">Редактировать объект</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -1029,7 +1282,7 @@
 					<h3 class="modal__title">Самарский округ №2</h3>
 					<p class="modal__description">2 представителя</p>
 				</div>
-				<button class="modal__close">
+				<button class="modal__close-btn modal__close">
 					<svg class="modal__close-icon">
 						<use xlink:href="img/sprite.svg#icon-close"></use>
 					</svg>
@@ -1081,11 +1334,19 @@
 
 			var myPlacemark = new ymaps.Placemark([55.749998, 37.606325], {}, {
 				iconLayout: "default#imageWithContent",
-				iconImageHref: "img/dist/icon-balloon.svg",
-				iconImageSize: [74, 48],
+				iconImageHref: "img/icon-balloon-blue.svg",
+				iconImageSize: [40, 40],
 				iconImageOffset: [-12, -50],
 			})
 			myMap.geoObjects.add(myPlacemark);
+
+			var myPlacemark2 = new ymaps.Placemark([55.949998, 37.616325], {}, {
+				iconLayout: "default#imageWithContent",
+				iconImageHref: "img/icon-balloon-red.svg",
+				iconImageSize: [40, 40],
+				iconImageOffset: [-12, -50],
+			})
+			myMap.geoObjects.add(myPlacemark2);
 		});
 	</script>
 </body>
